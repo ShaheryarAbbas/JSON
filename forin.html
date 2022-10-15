@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>for in</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var data = [
+        { "name" : "Sahil", "age" : 26, "email" : "sahil@gmail.com" },
+        { "name" : "Muneeb", "age" : 19, "email" : "muneeb@gmail.com" },
+        { "name" : "Sami", "age" : 29, "email" : "sami@gmail.com" }
+    ]
+    for (var a in data){
+        document.writeln(data[a].name)
+        document.writeln(data[a].age)
+        document.writeln(data[a].email)
+        document.writeln("<br>")
+    }
+</script>
