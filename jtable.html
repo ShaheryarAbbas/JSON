@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON Table</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var data = [
+        { "name" : "Sahil", "age" : 26, "email" : "sahil@gmail.com" },
+        { "name" : "Muneeb", "age" : 19, "email" : "muneeb@gmail.com" },
+        { "name" : "Sami", "age" : 29, "email" : "sami@gmail.com" }
+    ]
+    for (var a in data){
+        document.writeln("<table border = '1'>" + "<tr>" + "<td>"+ data[a].name + "</td>" + "</tr>" + "</table>")
+        document.writeln("<table border = '1'>" + "<tr>" + "<td>"+ data[a].age + "</td>" + "</tr>" + "</table>")
+        document.writeln("<table border = '1'>" + "<tr>" + "<td>"+ data[a].email + "</td>" + "</tr>" + "</table>")
+
+        document.writeln("<br>")
+    }
+</script>
