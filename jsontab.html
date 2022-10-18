@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSON Table with Image</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Empty</th>
+            <th>Image</th>
+        </tr>
+   
+</body>
+</html>
+<script>
+    var data=[
+        {"id":101,"name": "Oppo","status":true,"empty":null,"img":"./images/phone.jpg"},
+        {"id":102,"name": "Samsung","status":true,"empty":null,"img":"./images/phone2.png"},
+        {"id":103,"name": "Nokia","status":true,"empty":null,"img":"./images/phone3.jpg"},
+        {"id":104,"name": "LG","status":true,"empty":null,"img":"./images/phone4.png"}
+    ]
+    for(var i in data){
+        document.writeln("<tr>");
+        document.writeln("<td>"+data[i].id+"</td>");
+        document.writeln("<td>"+data[i].name+"</td>");
+        document.writeln("<td>"+data[i].status+"</td>");
+        document.writeln("<td>"+data[i].empty+"</td>");
+        document.writeln("<td> <img src="+data[i].img+" height='100' width='100'></td></tr>");
+    }
+    document.writeln("</table>");
+</script>
