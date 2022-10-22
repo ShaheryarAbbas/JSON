@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Get JSON Table</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+var a=""
+$(document).ready(function(){
+        $("#abc").click(function(){
+            $.get("https://jsonplaceholder.typicode.com/photos",function(data){
+                for(var i=0;i<=50;i++){
+                    a+="<tr>"
+                        a+="<td>"+ data[i].id +"</td>"
+                        a+="<td>"+ data[i].title+"</td>"
+                a += "<td>" + "<img src="+data[i].url+" height='100' width='100'>" +"</td>"
+                a += "<td>" + "<img src="+data[i].thumbnailUrl+" height='100' width='100'>" +"</td>"
+                        a+="</tr>"
+                        document.getElementById("show").innerHTML=a
+                }
+            })
+        })
+    })
+</script>
+</head>
+<body>    
+    <input type="button" id="abc" value="API Fetch">
+
+    <table>
+        <th>ID</th>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Thumnail URL</th>
+        <tbody id="show"></tbody>
+    </table>
+</body>
+</html>
